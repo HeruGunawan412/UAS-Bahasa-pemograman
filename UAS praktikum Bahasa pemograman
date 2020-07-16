@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int Diskon(){
+	float Total_pembayaran, Diskon, Total_Belanja, Uang, Kembalian;
+	cout << " Masukkan total belanja : ";
+	cin >> Total_pembayaran;
+		if (Total_pembayaran>500000){
+			Diskon = Total_pembayaran*0.10;
+			Total_Belanja = Total_pembayaran-Diskon;
+	cout<<endl << "Anda mendapatkan diskon 10% " <<endl;
+}
+	else{
+		Total_Belanja=Total_pembayaran;
+		cout<< " Maaf anda tidak mendapatkan diskon "<<endl;
+	}
+	cout << " Jumlah potongan harga : " <<Diskon<<endl;
+	cout << " Total pembayaran : " <<Total_Belanja<<endl;
+	cout << " Uang Pembeli : " ;
+	cin >> Uang;
+	if (Uang>=Total_Belanja){
+		Kembalian=Uang-Total_Belanja;
+		cout << " uang kembalian : " <<Kembalian<<endl;
+	}
+	else {
+		cout<<" maaf uang anda tidak cukup ";
+	}
+}
+int main(){
+	Diskon();
+	return 0;
+}
